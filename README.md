@@ -66,3 +66,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+NB 
+the purpose of a Weather app is help to learn how to use API's and successfully integrate them to the website app that is created. the purpose  is to create different or multiple components. The major component is the App.js
+1.multiple files that contain the UI code and import those files into one single which os imported int the index.html which is what we see on the website. 
+Another thing is to be able to understand the use of state, props and render and how rthey work in the create-react-app
