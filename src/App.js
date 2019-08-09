@@ -3,6 +3,7 @@ import Titles from "./components/Titles";
 import Forms from "./components/Forms";
 import Weather from "./components/weather";
 
+
 const API_KEY = "2c824efa1c01c2bd98d254bcd0fa3ff8";
 
 
@@ -46,7 +47,7 @@ class App extends React.Component { //app is the major component
     country:undefined,
     humidity:undefined,
     description:undefined,
-    error:"put the neccessary info"
+    error:"Please Enter Data"
   
   });
  }
@@ -56,19 +57,34 @@ class App extends React.Component { //app is the major component
   render () {
     return (
       <div>
-        <Titles />
-        <Forms getWeather={this.getWeather}/>
-        <Weather 
-        temperature={this.state.temperature}
-        city={this.state.city}
-        country={this.state.country} 
-        humidity={this.state.humidity}
-        description={this.state.description}
-        error={this.state.error}/>
-        </div>
+       <div className="wrapper">
+         <div className="main">
+           <div className="container">
+             <div className="row">
+                <div className="col-xs-5 title-container">
+                  <Titles />
+                </div>
+                <div className="col-xs-7 form-container">
+
+                <Forms getWeather={this.getWeather}/>
+                <Weather 
+                  temperature={this.state.temperature}
+                  city={this.state.city}
+                  country={this.state.country} 
+                  humidity={this.state.humidity}
+                  description={this.state.description}
+                  error={this.state.error}
+                  />
+                </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
     );
 
   }
 };
+
 
 export default App;

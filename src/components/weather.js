@@ -1,18 +1,29 @@
 import React from "react";
 
-const Weather = (props) => {
-//since we are returning just a single function we can get rid of teh return key and 
-    return (
+const Weather = props => (
+//since we are returning just a single arguement in a function we can get rid of teh return key and 
         <div>
-            {props.city && props.country && <p>Location:{props.city}, {props.country}</p>}
-            {props.temperature && <p>temperature:{props.location}</p>}
-            {props.humidity && <p>humidity:{props.humidity}</p>}
-            {props.description && <p>Conditions:{props.description}</p>}
-            {props.error && <p>{props.error}</p>}
+            {props.city && props.country && <p className ="weather_key">Location: 
+           <span className="weather_value"> {props.city}, {props.country}</span> 
+            </p>}
+            {props.temperature && <p className ="weather_key">Temperature: 
+            <span className="weather_value"> {props.temperature}</span>
+                
+            </p>}
+            {props.humidity && <p className ="weather_key">Humidity: 
+            <span className="weather_value"> {props.humidity}</span>
+            
+            </p>}
+            {props.description && <p className ="weather_key">Conditions: 
+            <span className="weather_value"> {props.description}</span>
+            
+            </p>}
+            {props.error && <p className= "weather_error"> {props.error}
+            </p>}
         </div>
-    );
-}
+    
 
+);
 
 export default Weather;
 
